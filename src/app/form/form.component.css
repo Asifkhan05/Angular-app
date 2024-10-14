@@ -1,0 +1,47 @@
+.saveBt{
+    background-color: rgb(174, 171, 177);
+    display: flex;
+    justify-content: end;
+    padding: 10px 20px;
+}
+.saveBt>button{
+    margin: 5px ;
+    padding:10px 20px;
+    border: none;
+    font-weight: bolder;
+
+}
+.saveBt>button:last-child{
+    color: white;
+    background: blue;
+}
+
+.tableContainer{
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    justify-content: center;
+    margin: 70px 0 0 120px;
+    text-align: left;
+
+}
+tr,td,th{
+    border-bottom: 1px solid black;
+
+    padding:40px 0 5px 0 ;
+}
+table{
+   border-collapse: collapse;
+}
+.input{
+     max-width: 100%;
+     min-width: 100%;
+     outline: none;
+     border: none;
+}  
+#radio{
+    display: flex;
+    justify-content: space-between;
+    width: 95%
+    
+}
+

@@ -1,0 +1,38 @@
+<form [formGroup]="content" (submit)="dataSubmit()">
+    <div class="saveBt">
+        <button  type="button" (click)="cancelBtn()" >Cancel</button>
+        <button type="submit" >Save</button>
+ 
+    </div>
+
+    <div class="tableContainer">
+       <table>
+          <tr>
+            <th>Name</th>
+            <td><input formControlName="Name" class="input" type="text"></td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td><input  class="input" formControlName="Email" type="text"></td>
+          </tr>
+          <tr>
+             <th>
+                Gender 
+             </th>
+             <td >
+                  <div id="radio">
+                    <input  type="radio" formControlName="Gender" id="male" value="male" name="Gender"> <label for="male">Male</label> <input  formControlName="Gender" value="female" name="Gender"type="radio" id="female"><label for="female">Female</label>
+                    <input value="Others" formControlName="Gender"  id="others"  name="Gender" type="radio"><label for="others">Others</label>
+                  </div>
+             </td>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <td>
+                <textarea name="" formControlName="Address"  class="input" id=""></textarea>
+            </td>
+          </tr>
+       </table>
+    </div>
+
+</form>

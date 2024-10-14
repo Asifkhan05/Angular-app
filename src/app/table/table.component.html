@@ -1,0 +1,40 @@
+<app-thead (filterChange)="onFilterChange($event)"></app-thead>
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of paginatedData; let i = index">
+        <td><a (click)="editData((currentPage - 1) * itemsPerPage + i)" [routerLink]>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</a></td>
+        <td><a href="">{{ item.Name }}</a></td>
+        <td>{{ item.Email }}</td>
+        <td>{{ item.Gender }}</td>
+        <td>{{ item.Address }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Total Count : {{ count}}</p>
+  <div class="pagination">
+    
+    <span>Items per page:</span>
+    <select [(ngModel)]="itemsPerPage" (change)="updatePagination()">
+      <option *ngFor="let option of pageSizeOptions" [value]="option">{{ option }}</option>
+    </select>
+    
+    <span>{{ startIndex + 1 }} - {{ endIndex }} of {{ filteredData.length }}</span>
+    
+    <button (click)="firstPage()" [disabled]="currentPage === 1">⏮</button>
+    <button (click)="previousPage()" [disabled]="currentPage === 1">❮</button>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">❯</button>
+    <button (click)="lastPage()" [disabled]="currentPage === totalPages">⏭</button>
+  </div>
+</div>
+

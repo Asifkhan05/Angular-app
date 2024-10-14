@@ -1,0 +1,11 @@
+<div class="create">
+    <button (click)="formClick()" >+ Create AI Models</button>
+</div>
+
+<div class="search">
+    <input type="text"  [(ngModel)]="filterText" 
+    (input)="onFilterChange()"  placeholder="AI Models">
+     <br>
+     <button (click)="save()" >saved filter</button> 
+</div>
+

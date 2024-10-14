@@ -1,0 +1,17 @@
+
+div{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center; 
+    
+
+}
+button{
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(174, 171, 177);
+    padding: 35px 80px;
+    font-weight:bolder;
+    
+}
